@@ -1,16 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/main.scss';
-import './styles/styles.scss';
-import big from './assets/big.jpg';
-import small from './assets/small.jpg';
+import App from './root/App';
 
 ReactDOM.render(
-  <div className="test">
-    Kaiz Hudda
-    <img src={big} />
-    <img src={small} />
-  
-  </div>,
+  <App />,
   document.querySelector('#root')
 );
