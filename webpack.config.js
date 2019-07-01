@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: {
@@ -9,8 +10,14 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
+    filename: devMode ? '[name].[hash].js' : '[name].[chunkhash].js',
     // publicPath: 'dist/'
+  },
+  devServer: {
+    contentBase: "dist", // everything will be served from dist
+    hot: true, // enables hot reloading
+    overlay: true, // if an error occurs with syntax it will overlay the issue in the browser
+    port: 6500
   },
   module: {
     rules: [
@@ -58,8 +65,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
-      chunkFilename: '[id].css',
+      filename: devMode ? 'styles.[chunkhash].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
