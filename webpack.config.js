@@ -2,8 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 var glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-const VENDOR_IMPORTS = ['react', 'react-dom'];
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -12,7 +11,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: 'dist/'
+    // publicPath: 'dist/'
   },
   module: {
     rules: [
@@ -31,7 +30,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '/css',
+              publicPath: '/',
               hmr: process.env.NODE_ENV === 'development',
             },
           },
@@ -62,6 +61,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles.css',
       chunkFilename: '[id].css',
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
     })
   ],
   optimization: {
