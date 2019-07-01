@@ -3,11 +3,16 @@ var path = require('path');
 var glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const VENDOR_IMPORTS = ['react', 'react-dom'];
+
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    bundle: './src/index.js',
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].js',
+    publicPath: 'dist/'
   },
   module: {
     rules: [
@@ -35,6 +40,22 @@ module.exports = {
           'sass-loader'
         ],
       },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: { 
+              limit: 40000,
+              outputPath: 'assets'
+            },
+          },
+          {
+            loader: 'image-webpack-loader'
+          }
+        ]
+
+      }
     ]
   },
   plugins: [
@@ -43,4 +64,10 @@ module.exports = {
       chunkFilename: '[id].css',
     })
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      name: 'vendor'
+    }
+  }
 };
