@@ -21,7 +21,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
+        test: [/.css$|.scss$/],
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -30,14 +30,16 @@ module.exports = {
               hmr: process.env.NODE_ENV === 'development',
             },
           },
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ],
       },
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'styles.css',
+      chunkFilename: '[id].css',
     })
   ],
 };
