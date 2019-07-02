@@ -9,4 +9,5 @@ Redux
 TODO:
 Jest/Enzyme
 SEO
+Prettier/Eslint
 
