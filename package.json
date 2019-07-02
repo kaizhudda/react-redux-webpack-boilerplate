@@ -1,16 +1,25 @@
 {
   "name": "react-redux-webpack-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "A highly scalable react boilerplate, that enables rapid development & deployment to any static webhost.",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production && webpack -p",
     "start": "webpack-dev-server --inline --open"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "hot reloading",
+    "redux",
+    "react router v4",
+    "redux thunk",
+    "boilerplate",
+    "webpack v4",
+    "babel"
+  ],
   "author": "Kaiz Hudda",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-transform-runtime": "^7.4.4",
