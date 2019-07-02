@@ -17,7 +17,8 @@ module.exports = {
     contentBase: "dist", // everything will be served from dist
     hot: true, // enables hot reloading
     overlay: true, // if an error occurs with syntax it will overlay the issue in the browser
-    port: 6500
+    port: 6500,
+    historyApiFallback: true
   },
   module: {
     rules: [
