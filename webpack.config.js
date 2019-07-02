@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -17,7 +18,8 @@ module.exports = {
     contentBase: "dist", // everything will be served from dist
     hot: true, // enables hot reloading
     overlay: true, // if an error occurs with syntax it will overlay the issue in the browser
-    port: 6500
+    port: 6500,
+    historyApiFallback: true
   },
   module: {
     rules: [
@@ -73,7 +75,10 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    })
+    }),
+    new CopyPlugin([
+      { from: 'src/public', to: './' },
+    ]),
   ],
   optimization: {
     splitChunks: {

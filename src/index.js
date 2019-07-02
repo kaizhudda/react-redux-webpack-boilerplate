@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router } from 'react-router-dom';
+import history from './history';
 import App from './core';
 
 ReactDOM.render(
-  <App />,
+  <Router history={history}>
+    <App />
+  </Router>,
   document.querySelector('#root')
 );
