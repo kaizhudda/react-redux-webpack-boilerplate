@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router-dom';
-import history from './history';
+import history from './utils/history';
 import Store from './store';
 import App from './core';
 
