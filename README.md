@@ -101,7 +101,7 @@ If you have the [Redux DevTools chrome extension](https://chrome.google.com/webs
 
 ## Demo
 
-A demonstration of this app can be seen [running on netlify](https://react-redux.herokuapp.com)
+A demonstration of this app can be seen [running on surge](http://boilerplate-redux.surge.sh)
 <!-- , which is a deployment of the [netlify branch](https://github.com/erikras/react-redux-universal-hot-example/tree/heroku). -->
 
 
