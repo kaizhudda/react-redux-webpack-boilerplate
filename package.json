@@ -19,6 +19,7 @@
     "@hot-loader/react-dom": "^16.8.6",
     "autoprefixer": "^9.6.0",
     "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.3",
     "cross-env": "^5.2.0",
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
