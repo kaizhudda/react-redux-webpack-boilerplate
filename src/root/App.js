@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader';
 import React, { useState } from 'react';
 import '../styles/main.scss';
 import '../styles/styles.scss';
@@ -22,4 +23,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default hot(module)(App);
