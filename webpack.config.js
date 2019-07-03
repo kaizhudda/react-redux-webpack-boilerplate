@@ -1,9 +1,11 @@
 const webpack = require('webpack');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -16,7 +18,7 @@ module.exports = {
     // publicPath: 'dist/'
   },
   devServer: {
-    contentBase: "dist", // everything will be served from dist
+    contentBase: 'dist', // everything will be served from dist
     hot: true, // enables hot reloading
     overlay: true, // if an error occurs with syntax it will overlay the issue in the browser
     port: 6500,
