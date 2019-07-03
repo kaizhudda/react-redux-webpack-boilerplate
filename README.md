@@ -5,11 +5,12 @@ React
 Redux
 React-Router V4
 Redux
+Eslint
 
 TODO:
 Jest/Enzyme
 SEO
-Prettier/Eslint
+
 
 # React Redux Webpack Boilerplate
 
@@ -19,15 +20,19 @@ Prettier/Eslint
 
 This react boilerplate contains the following features:
 
-* [React](https://github.com/facebook/react)
+* [Webpack 4](http://webpack.github.io) for bundling
+* [Babel](http://babeljs.io) for transpiling ES6 and ES7 
+* [React](https://github.com/facebook/react) 
 * [React Router](https://github.com/rackt/react-router)
-* [Babel](http://babeljs.io) for ES6 and ES7 magic
-* [Webpack](http://webpack.github.io) for bundling
-* [Webpack Hot Middleware](https://github.com/glenjamin/webpack-hot-middleware)
-* [Redux](https://github.com/rackt/redux)
-* [Redux Dev Tools](https://github.com/gaearon/redux-devtools) support
-<!-- * [ESLint](http://eslint.org) to maintain a consistent code style -->
-* [style-loader](https://github.com/webpack/style-loader), [sass-loader](https://github.com/jtangelder/sass-loader) to allow import of stylesheets in plain css and sass
+* [Redux](https://github.com/rackt/redux) for global state management
+* [Redux Thunk Middleware](https://github.com/reduxjs/redux-thunk)
+* [SCSS](https://sass-lang.com/), and CSS3 support
+
+#### Development Features
+* [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/) A blazing fast local development server, with hot reloading
+* [React Hot Loader](https://github.com/gaearon/react-hot-loader) ability to modify react components in real time, without reloading the page, and without losing component state when using webpack dev server
+* [Redux Dev Tools](https://github.com/gaearon/redux-devtools) to easily navigate your redux store tree and see actions and their effects, live.
+* [ESLint](http://eslint.org) to maintain a consistent code style throughout your application
 <!-- * [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) to customize Bootstrap and FontAwesome -->
 <!-- * [react-helmet](https://github.com/nfl/react-helmet) to manage title and meta tag information on both server and client -->
 
@@ -78,14 +83,10 @@ Hit ```Enter``` and it will build and deploy in a jiffy.
 
 
 ## Deployment on Heroku
- 
----
 
 TODO
 
 ## Deployment on Netlify
- 
----
 
 TODO
 
@@ -112,24 +113,6 @@ Now it's possible to render the image both on client and server. Please refer to
 ```javascript
 let logoImage = require('./logo.png');
 ``` -->
-
-<!-- #### Styles
-
-This project uses [local styles](https://medium.com/seek-ui-engineering/the-end-of-global-css-90d2a4a06284) using [css-loader](https://github.com/webpack/css-loader). The way it works is that you import your stylesheet at the top of the `render()` function in your React Component, and then you use the classnames returned from that import. Like so:
-
-```javascript
-render() {
-const styles = require('./App.scss');
-...
-```
-
-Then you set the `className` of your element to match one of the CSS classes in your SCSS file, and you're good to go!
-
-```jsx
-<div className={styles.mySection}> ... </div>
-``` -->
-
-<!-- ## Deployment on Heroku -->
  
 ---
 Thanks for checking this out.
