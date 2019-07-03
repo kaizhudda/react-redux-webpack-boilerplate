@@ -1,20 +1,11 @@
 # react-redux-webpack-boilerplate
-This is a react/redux boilerplate starter with webpack &amp; babel
-
-React
-Redux
-React-Router V4
-Redux
-Eslint
 
 TODO:
-Jest/Enzyme
+Jest/Enzyme Testing
 SEO
 
 
 # React Redux Webpack Boilerplate
-
----
 
 ## Features
 
@@ -62,7 +53,6 @@ This command will output your built web app in ```dist/``` folder. Thereafter yo
 If you would like to deploy to **modern web hosts**, it's even **easier**.
 
 ## Deployment on Surge.sh
----
 
  **Pre-requiste:** Build Production first (to generate dist folder)
 
