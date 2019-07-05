@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -86,6 +87,7 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   optimization: {
+    minimizer: [new UglifyJsPlugin()],
     splitChunks: {
       chunks: 'all',
       name: 'vendor'
