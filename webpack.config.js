@@ -75,6 +75,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      publicUrl: process.env.npm_package_homepage
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
