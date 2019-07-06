@@ -27,6 +27,16 @@ This react boilerplate contains the following features:
 <!-- * [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) to customize Bootstrap and FontAwesome -->
 <!-- * [react-helmet](https://github.com/nfl/react-helmet) to manage title and meta tag information on both server and client -->
 
+#### Production Optimizations
+* Code Spltting bundle.js into two seperate files, one for vendor code, one for code written by us, for better caching. 
+* [UglifyJS Plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) for minifying JavaScript production files.
+* [Optimize CSS Assets Plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin) for minifying CSS production file.
+* [HTML Webpack Plugin](https://github.com/jantimon/html-webpack-plugin) for minimizing HTML production file.
+* [Image Webpack Loader](https://github.com/jantimon/html-webpack-plugin) Reduces image sizes
+and many more including inlining small images into ```bundle.js```
+and using css post loader to inject browser specfic styles into the final production stylesheet.css file
+
+
 ## Installation
 
 ```bash
