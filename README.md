@@ -14,7 +14,8 @@ This react boilerplate contains the following features:
 * [Redux](https://github.com/rackt/redux) for global state management
 * [Redux Thunk Middleware](https://github.com/reduxjs/redux-thunk)
 * [SCSS](https://sass-lang.com/), and CSS3 support
-* [Jest/Enzyme]() for adding unit tests & snapshot tests to the project
+* [Jest/Enzyme](https://jestjs.io/) for adding unit tests & snapshot tests to the project
+* [SEO](https://github.com/nfl/react-helmet) support for your react application
 
 #### Development Features
 * [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/) A blazing fast local development server, with hot reloading
