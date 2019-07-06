@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -75,6 +77,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
       publicUrl: process.env.npm_package_homepage
     }),
     new webpack.DefinePlugin({
@@ -86,6 +96,7 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   optimization: {
+    minimizer: [new UglifyJsPlugin(), new OptimizeCssAssetsPlugin()],
     splitChunks: {
       chunks: 'all',
       name: 'vendor'
