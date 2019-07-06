@@ -9,7 +9,8 @@
     "start": "webpack-dev-server --inline --open",
     "eslint": "eslint src",
     "eslint:fix": "eslint src --fix",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test:coverage": "jest --collectCoverage"
   },
   "keywords": [
     "react",
@@ -23,10 +24,6 @@
   ],
   "author": "Kaiz Hudda",
   "license": "MIT",
-  "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
-    "setupFiles": ["./setupTest.js"]
-  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-transform-runtime": "^7.4.4",
