@@ -1,9 +1,5 @@
-# react-redux-webpack-boilerplate
-
 TODO:
-Jest/Enzyme Testing
 SEO
-
 
 # React Redux Webpack Boilerplate
 
@@ -18,6 +14,7 @@ This react boilerplate contains the following features:
 * [Redux](https://github.com/rackt/redux) for global state management
 * [Redux Thunk Middleware](https://github.com/reduxjs/redux-thunk)
 * [SCSS](https://sass-lang.com/), and CSS3 support
+* [Jest/Enzyme]() for adding unit tests & snapshot tests to the project
 
 #### Development Features
 * [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/) A blazing fast local development server, with hot reloading
@@ -26,6 +23,16 @@ This react boilerplate contains the following features:
 * [ESLint](http://eslint.org) to maintain a consistent code style throughout your application
 <!-- * [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) to customize Bootstrap and FontAwesome -->
 <!-- * [react-helmet](https://github.com/nfl/react-helmet) to manage title and meta tag information on both server and client -->
+
+#### Production Optimizations
+* Code Spltting bundle.js into two seperate files, one for vendor code, one for code written by us, for better caching. 
+* [UglifyJS Plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) for minifying JavaScript production files.
+* [Optimize CSS Assets Plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin) for minifying CSS production file.
+* [HTML Webpack Plugin](https://github.com/jantimon/html-webpack-plugin) for minimizing HTML production file.
+* [Image Webpack Loader](https://github.com/jantimon/html-webpack-plugin) Reduces image sizes
+and many more including inlining small images into ```bundle.js```
+and using css post loader to inject browser specfic styles into the final production stylesheet.css file
+
 
 ## Installation
 
@@ -91,8 +98,6 @@ If you have the [Redux DevTools chrome extension](https://chrome.google.com/webs
 ### Using The ```public/``` Folder
 
 The ```public/``` folder located at the root of this boilerplate is where you can place, favicons, htacess, redirect files etc, that will automatically get added to the ```dist/``` when you build your project for production.
-
-<!-- DevTools are not enabled during production. -->
 
 
 ## Demo
