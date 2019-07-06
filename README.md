@@ -1,6 +1,3 @@
-TODO:
-SEO
-
 # React Redux Webpack Boilerplate
 
 ## Features
