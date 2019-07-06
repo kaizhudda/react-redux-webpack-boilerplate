@@ -1,8 +1,5 @@
-# react-redux-webpack-boilerplate
-
 TODO:
 SEO
-
 
 # React Redux Webpack Boilerplate
 
