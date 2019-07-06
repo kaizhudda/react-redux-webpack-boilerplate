@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 const Home = ({ fetchData, data }) => {
   const onClickData = () => {
@@ -8,6 +9,10 @@ const Home = ({ fetchData, data }) => {
 
   return (
     <div className="Home">
+      <Helmet>
+        <title>Home</title>
+        <meta charSet="utf-8" name="description" content="Welcome to React / Redux Lightweight boilerplate!" />
+      </Helmet>
       Home Page
       <button type="button" onClick={onClickData}>Get Data</button>
       <p>{data}</p>
