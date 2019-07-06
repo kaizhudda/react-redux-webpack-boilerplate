@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render a snapshot 1`] = `
+<div>
+  <Link
+    to="/"
+  >
+    Home
+  </Link>
+  <Link
+    to="/about"
+  >
+    About
+  </Link>
+</div>
+`;
