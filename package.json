@@ -11,8 +11,12 @@
     "eslint:fix": "eslint src --fix",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "test:coverage": "jest --collectCoverage",
-    "precommit": "lint-staged"
+    "test:coverage": "jest --collectCoverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged" 
+    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
