@@ -19,7 +19,7 @@ const Home = () => {
         <meta charSet="utf-8" name="description" content="Welcome to React / Redux Lightweight boilerplate!" />
       </Helmet>
       Home Page
-      <button type="button" onClick={onClickData}>Get Data</button>
+      <button type="button" onClick={onClickData}>Get Random Number</button>
       <p>{data}</p>
     </div>
   );
