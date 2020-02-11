@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { selectData } from "../../store/selectors";
 import { fetchData } from "../../store/actions/testAction";
