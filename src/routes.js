@@ -1,7 +1,7 @@
-import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import Home from './views/home';
-import About from './views/about';
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import Home from "./views/home";
+import About from "./views/about";
 
 const Routes = () => (
   <Switch>
@@ -11,4 +11,4 @@ const Routes = () => (
   </Switch>
 );
 
-export default Routes; 
+export default Routes;

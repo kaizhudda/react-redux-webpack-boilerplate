@@ -1,12 +1,12 @@
-import { TEST_TYPE } from '../actions/types';
+import { TEST_TYPE } from "../actions/types";
 
-const INITAL_STATE = '';
+const INITAL_STATE = "";
 
 export const data = (state = INITAL_STATE, action) => {
   switch (action.type) {
     case TEST_TYPE:
       return action.payload;
-    default: 
+    default:
       return state;
   }
 };

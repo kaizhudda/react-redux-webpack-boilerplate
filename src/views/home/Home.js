@@ -1,9 +1,9 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { selectData } from '../../store/selectors';
-import { fetchData } from '../../store/actions/testAction';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { selectData } from "../../store/selectors";
+import { fetchData } from "../../store/actions/testAction";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -16,18 +16,21 @@ const Home = () => {
     <div className="Home">
       <Helmet>
         <title>Home</title>
-        <meta charSet="utf-8" name="description" content="Welcome to React / Redux Lightweight boilerplate!" />
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="Welcome to React / Redux Lightweight boilerplate!"
+        />
       </Helmet>
       Home Page
-      <button type="button" onClick={onClickData}>Random Number</button>
+      <button type="button" onClick={onClickData}>
+        Random Number
+      </button>
       <p>{data}</p>
     </div>
   );
 };
 
-Home.propTypes = {
-  fetchData: PropTypes.func,
-  data: PropTypes.string
-};
+Home.propTypes = {};
 
 export default Home;
