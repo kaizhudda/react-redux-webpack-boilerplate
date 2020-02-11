@@ -19,7 +19,8 @@
       "jest/globals": true
   },
   "extends": [
-      "airbnb"
+      "airbnb",
+      "plugin:prettier/recommended"
   ],
   "rules": {
     "label-has-for": "off",

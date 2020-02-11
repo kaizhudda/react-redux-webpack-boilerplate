@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom';
-import history from './utils/history';
-import Store from './store';
-import App from './core';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Router } from "react-router-dom";
+import history from "./utils/history";
+import Store from "./store";
+import App from "./core";
 
 ReactDOM.render(
   <Store>
@@ -11,5 +11,5 @@ ReactDOM.render(
       <App />
     </Router>
   </Store>,
-  document.querySelector('#root')
+  document.querySelector("#root")
 );

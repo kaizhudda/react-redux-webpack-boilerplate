@@ -1,4 +1,4 @@
-import { TEST_TYPE } from './types';
+import { TEST_TYPE } from "./types";
 
 export const fetchData = () => async dispatch => {
   dispatch({
