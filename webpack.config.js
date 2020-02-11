@@ -101,10 +101,5 @@ module.exports = {
       chunks: 'all',
       name: 'vendor'
     }
-  },
-  resolve: {
-    alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
   }
 };

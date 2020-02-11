@@ -9,7 +9,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const data = useSelector(selectData);
   const onClickData = () => {
-    dispatch(fetchData('Button clicked'));
+    dispatch(fetchData());
   };
 
   return (
