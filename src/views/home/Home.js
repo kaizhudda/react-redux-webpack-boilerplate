@@ -1,10 +1,15 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { selectData } from '../../store/selectors';
+import { fetchData } from '../../store/actions/testAction';
 
-const Home = ({ fetchData, data }) => {
+const Home = () => {
+  const dispatch = useDispatch();
+  const data = useSelector(selectData);
   const onClickData = () => {
-    fetchData('Button clicked');
+    dispatch(fetchData('Button clicked'));
   };
 
   return (
