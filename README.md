@@ -7,8 +7,8 @@ This react boilerplate contains the following features:
 * [Webpack 4](http://webpack.github.io) for bundling
 * [Babel](http://babeljs.io) for transpiling ES6 and ES7 
 * [React](https://github.com/facebook/react) 
-* [React Router](https://github.com/rackt/react-router)
-* [Redux](https://github.com/rackt/redux) for global state management
+* [React Router](https://github.com/rackt/react-router) with functional components and hooks
+* [Redux](https://github.com/rackt/redux) for global state  management with hooks
 * [Redux Thunk Middleware](https://github.com/reduxjs/redux-thunk)
 * [SCSS](https://sass-lang.com/), and CSS3 support
 * [Jest/Enzyme](https://jestjs.io/) for adding unit tests & snapshot tests to the project
@@ -16,7 +16,7 @@ This react boilerplate contains the following features:
 
 #### Development Features
 * [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/) A blazing fast local development server, with hot reloading
-* [React Hot Loader](https://github.com/gaearon/react-hot-loader) ability to modify react components in real time, without reloading the page, and without losing component state when using webpack dev server
+* React Hot Loader gives the ability to modify react components in real time, without reloading the page, and without losing component state when using webpack dev server
 * [Redux Dev Tools](https://github.com/gaearon/redux-devtools) to easily navigate your redux store tree and see actions and their effects, live.
 * [ESLint](http://eslint.org) to maintain a consistent code style throughout your application
 <!-- * [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) to customize Bootstrap and FontAwesome -->
